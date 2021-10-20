@@ -23,12 +23,6 @@ function Get-GlobalPrinters {
 		[string]$ComputerName
 	)
 
-    begin{
-        # Set object to collect printer info
-        $Global:PrinterInformation = [System.Collections.Generic.List[System.Object]]::New()
-    }
-    
-    process {
         if (!(Test-Connection -Count 1 -ComputerName $ComputerName -Quiet))
 		{
 			throw "Unable to connect to $ComputerName"
@@ -52,5 +46,4 @@ function Get-GlobalPrinters {
         }
         
         return $GlobalInstalledPrinters
-    }
 }

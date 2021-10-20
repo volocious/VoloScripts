@@ -1,11 +1,11 @@
 function Get-GlobalPrinters {
     <#
     .SYNOPSIS
-        Get user and globally installed printers from a remote computer
+        Get globally installed printers from a remote computer
     .DESCRIPTION
-        Get user and globally installed printers from a remote computer
+        Get globally installed printers from a remote computer
     .EXAMPLE
-        PS C:\> Get-PrinterInformation -ComputerName 999TSTPC999
+        PS C:\> Get-GlobalPrinters -ComputerName 999TSTPC999
         Gets printer information
     .INPUTS
         [string] for ComputerName
